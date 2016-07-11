@@ -1,0 +1,109 @@
+-- phpMyAdmin SQL Dump
+-- version 2.10.1
+-- http://www.phpmyadmin.net
+-- 
+-- Host: localhost
+-- Generation Time: Sep 11, 2007 at 08:28 PM
+-- Server version: 5.0.41
+-- PHP Version: 5.2.2
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+-- 
+-- Database: `zrpg`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `blueprint_items`
+-- 
+
+CREATE TABLE `blueprint_items` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(255) collate latin1_general_ci NOT NULL,
+  `description` text collate latin1_general_ci NOT NULL,
+  `type` enum('weapon','armour') collate latin1_general_ci NOT NULL,
+  `effectiveness` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=3 ;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `items`
+-- 
+
+CREATE TABLE `items` (
+  `id` int(11) NOT NULL auto_increment,
+  `player_id` int(11) NOT NULL,
+  `item_id` int(11) NOT NULL,
+  `status` enum('equipped','unequipped') collate latin1_general_ci NOT NULL default 'unequipped',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=9 ;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `mail`
+-- 
+
+CREATE TABLE `mail` (
+  `id` int(11) NOT NULL auto_increment,
+  `to` int(11) NOT NULL,
+  `from` int(11) NOT NULL,
+  `subject` varchar(255) collate latin1_general_ci NOT NULL,
+  `body` text collate latin1_general_ci NOT NULL,
+  `time` int(11) NOT NULL,
+  `status` enum('read','unread') collate latin1_general_ci NOT NULL default 'unread',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=12 ;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `players`
+-- 
+
+CREATE TABLE `players` (
+  `id` int(11) NOT NULL auto_increment,
+  `username` varchar(255) collate latin1_general_ci NOT NULL,
+  `password` varchar(255) collate latin1_general_ci NOT NULL,
+  `email` varchar(255) collate latin1_general_ci NOT NULL,
+  `rank` varchar(255) collate latin1_general_ci NOT NULL default 'Member',
+  `registered` int(11) NOT NULL,
+  `last_active` int(11) NOT NULL,
+  `ip` varchar(255) collate latin1_general_ci NOT NULL,
+  `level` int(11) NOT NULL default '1',
+  `stat_points` int(11) NOT NULL default '5',
+  `gold` int(11) NOT NULL default '100',
+  `bank` int(11) NOT NULL default '0',
+  `hp` int(11) NOT NULL default '50',
+  `maxhp` int(11) NOT NULL default '50',
+  `exp` int(11) NOT NULL default '0',
+  `maxexp` int(11) NOT NULL default '50',
+  `energy` int(11) NOT NULL default '10',
+  `maxenergy` int(11) NOT NULL default '10',
+  `strength` int(11) NOT NULL default '1',
+  `vitality` int(11) NOT NULL default '1',
+  `agility` int(11) NOT NULL default '1',
+  `interest` tinyint(1) NOT NULL default '0',
+  `kills` int(11) NOT NULL default '0',
+  `deaths` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=9 ;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `user_log`
+-- 
+
+CREATE TABLE `user_log` (
+  `id` int(11) NOT NULL,
+  `player_id` int(11) NOT NULL,
+  `msg` text collate latin1_general_ci NOT NULL,
+  `status` enum('read','unread') collate latin1_general_ci NOT NULL default 'unread',
+  `time` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;

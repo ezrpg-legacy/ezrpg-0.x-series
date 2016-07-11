@@ -1,0 +1,186 @@
+/*****************************************************/
+/*   Partly Based on Gerhard Erbes' template         */
+/*****************************************************/
+
+body
+{
+	margin: 0em auto;
+	padding: 0em;
+  	font-family: Georgia, Verdana,Tahoma, Arial,sans-serif;
+  	font-size: 0.8em;
+}
+
+
+#wrapper
+{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	border-left: 3px solid #AAAAAA;
+	border-right: 3px solid #AAAAAA;
+	padding: 0px 15px 0px 15px;
+	height: 98%;
+}
+
+#header
+{
+	width: 100%;
+	font-size: 5em;
+	color: #DD8822;
+	margin: 5px 0px 8px 0px;
+	padding: 5px;
+	text-align: center;
+}
+
+#header-text
+{
+	width: 90%;
+	height: 80px;
+	border: 1px solid #CCCCCC;
+	background-image: url('../images/header.jpg');
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#left
+{
+	width: 18%;
+	float: left;
+	border: 0px;
+	font-size: 0.9em;
+}
+
+.left-section
+{
+	vertical-align: top;
+	background-color: rgb(255,255,255);
+	color: rgb(50,50,50);
+	text-align: left;
+}
+
+.left-section ul
+{
+	width: 95%;
+	padding: 0em;
+	margin: 0em;
+	list-style: none;
+}
+
+.left-section li {
+	margin: 0em 0em 0em 0em;
+}
+
+
+.left-section li a {
+	display: block;
+	padding: 0.3em 0.7em 0.2em 1.2em;
+	border-left: solid 0.5em rgb(235,235,235);
+	border-top: solid 0.1em rgb(200,200,200);
+	background-color: rgb(235,235,235);
+	text-decoration: none;
+	font-weight: normal;
+	color: rgb(50,50,50);
+	height: 1.3em;
+}
+	
+.left-section a:hover {
+	border-left: solid 0.5em rgb(175,175,175);
+	background-color: rgb(220,220,220);
+	text-decoration: none;
+	color: rgb(50,50,50);
+}
+
+.left-section .header {
+	display: block;
+	margin: 1.0em 0em 0em 0em;
+	padding: 0.3em 0.7em 0.2em 0.4em;
+	border-left: solid 0.5em rgb(125,125,125);
+	background-color: rgb(220,220,220);
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+	color: rgb(50,50,50);
+	border-top: solid 0.1em rgb(200,200,200);
+}
+
+#right
+{
+	width: 78%;
+	float: right;
+	padding: 5px 0px 5px 0px;
+	margin: 5px 0px 5px 0px;
+}
+
+#content
+{
+	width: 97%;
+	padding: 5px;
+	border-left: 2px solid #AAAAAA;
+	border-right: 2px solid #AAAAAA;
+}
+
+
+#footer
+{
+	width: 100%;
+	clear: both;
+	padding: 20px 0px 0px 0px;
+}
+
+#footer-text
+{
+	width: 100%;
+	padding: 5px;
+	background-color: rgb(220,220,220);
+	text-align: center;
+	color: rgb(80,80,80);
+	font-size: 1.0em;
+	font-weight: bold;
+}
+
+td
+{
+	vertical-align: top;
+	font-size: 0.8em;
+}
+
+.row1
+{
+	background-color: #DDDDDD;
+}
+
+.row2
+{
+	background-color: #BBBBBB;
+}
+
+input, select, textarea
+{
+	border-left: 6px solid rgb(175,175,175);
+	border-right: 1px solid #999999;
+	border-top: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+	background-color: #EEEEEE;
+  	font-family: Georgia, Verdana,Tahoma, Arial,sans-serif;
+  	padding: 2px;
+  	margin: 2px;
+  	font-weight: bold;
+}
+
+fieldset
+{
+	border-left: 6px solid rgb(175,175,175);
+	border-right: 1px solid #999999;
+	border-top: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+	background-color: #FFFFFF;
+  	font-family: Georgia, Verdana,Tahoma, Arial,sans-serif;
+  	padding: 2px;
+  	margin: 2px;
+}
+
+th
+{
+	text-align: left;
+}
